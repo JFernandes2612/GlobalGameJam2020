@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\clickController.cs" />
+    <Compile Include="Assets\Scripts\toolButton.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/jelao/OneDrive/Desktop/GlobalGameJam2020/Main (dont mexer)/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
