@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class clickController : MonoBehaviour
 {
 
+
     [HideInInspector] public int previousItemIndex = -1;
     public Button itemToFix;
 
@@ -14,7 +15,6 @@ public class clickController : MonoBehaviour
     public Sprite[] itemSpriteArray;
     [HideInInspector] public Sprite currentSprite;
 
-    public int[] toolRepairAmount;
     [HideInInspector] public int currentRepairAmount;
 
     public Slider durabilitySlider;
@@ -51,7 +51,6 @@ public class clickController : MonoBehaviour
         itemToFix.image.sprite = currentSprite;
         durabilitySlider.maxValue = maxDurability;
 
-        currentRepairAmount = 1;
         durabilitySlider.value = 0;
         currentDurability = 0;
 
@@ -73,5 +72,5 @@ public class clickController : MonoBehaviour
             SelectNewItem();
         }
     }
-    
+
 }
