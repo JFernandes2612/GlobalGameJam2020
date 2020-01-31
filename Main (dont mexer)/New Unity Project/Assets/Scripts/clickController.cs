@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class clickController : MonoBehaviour
 {
 
+    [HideInInspector] public int previousItemIndex = -1;
     public Button itemToFix;
 
     [HideInInspector] public int itemIndex;
@@ -22,6 +23,8 @@ public class clickController : MonoBehaviour
 
     public int[] maxDurabilityArray;
 
+    public int[] moneyItemValue;
+
     public Text moneyText;
     [HideInInspector] public int currentMoney;
 
@@ -34,26 +37,41 @@ public class clickController : MonoBehaviour
 
     public void SelectNewItem()
     {
+        
         itemIndex = Random.Range(0, itemSpriteArray.Length);
+
+        while (itemIndex == previousItemIndex)
+        {
+            itemIndex = Random.Range(0, itemSpriteArray.Length);
+        }
 
         currentSprite = itemSpriteArray[itemIndex];
         maxDurability = maxDurabilityArray[itemIndex];
 
-        currentRepairAmount = 1;
-
-
         itemToFix.image.sprite = currentSprite;
         durabilitySlider.maxValue = maxDurability;
-        durabilitySlider.value = durabilitySlider.maxValue;
-        currentDurability = maxDurability;
+
+        currentRepairAmount = 1;
+        durabilitySlider.value = 0;
+        currentDurability = 0;
+
+        previousItemIndex = itemIndex;
+       
     }
 
 
 
     public void WasClicked()
     {
-        currentDurability = currentDurability - currentRepairAmount;
+        currentDurability = currentDurability + currentRepairAmount;
         durabilitySlider.value = currentDurability;
+        
+        if (currentDurability >= maxDurability)
+        {
+            currentMoney = currentMoney + moneyItemValue[itemIndex];
+            moneyText.text = "Money : " + currentMoney;
+            SelectNewItem();
+        }
     }
     
 }

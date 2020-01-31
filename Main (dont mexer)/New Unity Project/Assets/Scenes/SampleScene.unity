@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75d0e6dedb6b9498fffc77ee1b0553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousItemIndex: -1
   itemToFix: {fileID: 1322046903}
   itemIndex: 0
   itemSpriteArray:
@@ -687,6 +688,7 @@ MonoBehaviour:
   maxDurability: 0
   currentDurability: 0
   maxDurabilityArray: 050000000a00000014000000
+  moneyItemValue: 02000000050000000a000000
   moneyText: {fileID: 384754227}
   currentMoney: 0
 --- !u!1 &1691270124
