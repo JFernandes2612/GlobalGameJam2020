@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ClickController.cs" />
-    <Compile Include="Assets\Scripts\RepairTool.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\ToolButton.cs" />
-    <Compile Include="Assets\Scripts\UpgraderScript.cs" />
+    <Compile Include="Assets\Scripts\clickController.cs" />
+    <Compile Include="Assets\Scripts\repairTool.cs" />
+    <Compile Include="Assets\Scripts\toolButton.cs" />
+    <Compile Include="Assets\Scripts\upgraderScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Retchut/Desktop/ty/game jam/GlobalGameJam2020/Main (dont mexer)/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

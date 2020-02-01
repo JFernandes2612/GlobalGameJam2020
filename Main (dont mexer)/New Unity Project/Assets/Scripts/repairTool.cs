@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RepairTool : MonoBehaviour
+public class repairTool : MonoBehaviour
 {
 
     public int myCost;
@@ -19,11 +19,11 @@ public class RepairTool : MonoBehaviour
 
     public void ClickToRepair()
     {
-        if (FindObjectOfType<ClickController>().currentMoney >= myCost)
+        if (FindObjectOfType<clickController>().currentMoney >= myCost)
         {
-            FindObjectOfType<ClickController>().currentMoney -= myCost;
-            toolsInUse[toolnumber].GetComponent<ToolButton>().maxToolDurability = myDurabilityNow;
-            toolsInUse[toolnumber].GetComponent<ToolButton>().Start2();
+            FindObjectOfType<clickController>().currentMoney -= myCost;
+            toolsInUse[toolnumber].GetComponent<toolButton>().maxToolDurability = myDurabilityNow;
+            toolsInUse[toolnumber].GetComponent<toolButton>().Start2();
         }
         else
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class UpgraderScript : MonoBehaviour
+public class upgraderScript : MonoBehaviour
 {
     public int myCost;
     public int myRepairAmountIncrement;
@@ -14,11 +14,11 @@ public class UpgraderScript : MonoBehaviour
 
     public void IGotClicked()
     {
-        if (FindObjectOfType<ClickController>().currentMoney >= myCost)
+        if (FindObjectOfType<clickController>().currentMoney >= myCost)
         {
-            FindObjectOfType<ClickController>().currentMoney -= myCost;
-            toolsInUse[toolnumber].GetComponent<ToolButton>().repairAmount += myRepairAmountIncrement;
-            mainButton.GetComponent<ClickController>().currentRepairAmount += myRepairAmountIncrement;
+            FindObjectOfType<clickController>().currentMoney -= myCost;
+            toolsInUse[toolnumber].GetComponent<toolButton>().repairAmount += myRepairAmountIncrement;
+            mainButton.GetComponent<clickController>().currentRepairAmount += myRepairAmountIncrement;
         }
         else
         {

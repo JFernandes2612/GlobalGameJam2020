@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //SCRIPT QUE CONTROLA A DURABILIDADE DE TUDO E O ESTADO DAS COISAS
-public class ClickController : MonoBehaviour
+public class clickController : MonoBehaviour
 {
     public float timerAnimationChange;
 

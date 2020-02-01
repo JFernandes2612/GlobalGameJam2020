@@ -228,9 +228,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.094201, y: -2.7951565, z: 49.021973}
+    m_Target: {x: -0.98708296, y: -0.79778564, z: 171.84375}
     speed: 2
-    m_Value: {x: 6.094201, y: -2.7951565, z: 49.021973}
+    m_Value: {x: -0.98708296, y: -0.79778564, z: 171.84375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -280,9 +280,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.6311204
+    m_Target: 16.516497
     speed: 2
-    m_Value: 3.6311204
+    m_Value: 16.516497
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -424,11 +424,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/images/tools
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/images/tools
+  - Assets/Scripts
   m_LastFoldersGridSize: 53
   m_LastProjectPath: C:\Users\Retchut\Desktop\ty\game jam\GlobalGameJam2020\Main
     (dont mexer)\New Unity Project
@@ -436,8 +436,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c4360000
-    m_LastClickedID: 14020
+    m_SelectedIDs: c8360000
+    m_LastClickedID: 14024
     m_ExpandedIDs: 00000000ae360000ba36000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -491,9 +491,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 68350000
+    m_LastClickedInstanceID: 13672
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000058310000982f00006a3200007837000082370000b859ffff9274ffff223600006c3200005a3800004838000088370000000000001c380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -604,21 +604,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6efbffff
+      m_ExpandedIDs: 6efbffff0c3400006a34000082350000a8350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Background
+        m_OriginalName: Background
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 13398
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 12}
       m_SearchString: 
@@ -742,5 +742,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 13672
+  m_LastVerticalScrollValue: 200
