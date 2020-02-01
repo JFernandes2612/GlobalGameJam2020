@@ -89,7 +89,7 @@ public class ClickController : MonoBehaviour
             incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = "Max LVL";
         }
 
-        incomePerTick.text = "Income: " + passiveIncomeAmount + " per tick";                //atualiza o texto do income per tick
+        incomePerTick.text = "Income: " + passiveIncomeAmount + "Ǝs/" + passiveIncomeTime + " secs";                //atualiza o texto do income per tick
     }
 
     IEnumerator WaitTime(float timer)               //timer após reparar cada objeto
@@ -104,12 +104,12 @@ public class ClickController : MonoBehaviour
     {
         //inicialmente o dinheiro inicial é zero
         currentMoney = 0;
-        moneyText.text = "Money : " + currentMoney;
+        moneyText.text = "Money : " + "\n" + currentMoney + "Ǝs"; ;
         
         passiveIncomeTime = 10.0f;
         tickTime.text = "Tick Time: "+ passiveIncomeTime + " secs";
         passiveIncomeAmount = 1;
-        incomePerTick.text = "Income: " + passiveIncomeAmount + " per tick";
+        incomePerTick.text = "Income: " + passiveIncomeAmount + "Ǝs/10 secs";
         StartCoroutine(PassiveIncomeTimer());
 
         SelectNewItem();
@@ -117,7 +117,7 @@ public class ClickController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moneyText.text = "Money : " + currentMoney;
+        moneyText.text = "Money : " + "\n" + currentMoney + "Ǝs";
     }
 
 
