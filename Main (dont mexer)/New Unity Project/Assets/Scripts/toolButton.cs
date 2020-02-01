@@ -42,7 +42,7 @@ public class toolButton : MonoBehaviour
         sliderOfDurability.value = maxToolDurability;
     }
 
-    public void onClick()
+    public void OnClick()
     {
         //altera a variavel na outra script (quantidade de reparação(nivel))
         FindObjectOfType<clickController>().currentRepairAmount = repairAmount;
