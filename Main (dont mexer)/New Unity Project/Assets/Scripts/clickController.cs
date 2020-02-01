@@ -48,6 +48,12 @@ public class clickController : MonoBehaviour
         SelectNewItem();
     }
 
+    private void FixedUpdate()
+    {
+        moneyText.text = "Money : " + currentMoney;
+    }
+
+
     //quando é necessario selecionar um novo item para ser reparado.
     public void SelectNewItem()
     {

@@ -22,23 +22,39 @@ public class toolButton : MonoBehaviour
     //lista de tools de reparação
     public Button[] repairTools;
 
+    public Button[] Upgrades;
+
     void Start()
     {
         //atribui o valor de durabilidade inicial do tool definido publicamente no inspector
         sliderOfDurability.maxValue = maxToolDurability;
         sliderOfDurability.value = maxToolDurability;
+        for (int i = 0; i < repairTools.Length; i++)
+        {
+            Upgrades[i].interactable = false;
+        }
     }
+
+    public void Start2()
+    {
+        //atribui o valor de durabilidade inicial do tool definido publicamente no inspector
+        sliderOfDurability.maxValue = maxToolDurability;
+        sliderOfDurability.value = maxToolDurability;
+    }
+
     public void onClick()
     {
         //altera a variavel na outra script (quantidade de reparação(nivel))
         FindObjectOfType<clickController>().currentRepairAmount = repairAmount;
 
         //desativa o botão clicado mas ativa os outros
+        Upgrades[toolNumber].interactable = true;
         repairTools[toolNumber].interactable = false;
         for (int i=0; i<repairTools.Length; i++)
         {
             if (i != toolNumber)
             {
+                Upgrades[i].interactable = false;
                 repairTools[i].interactable = true;
             }
         }
