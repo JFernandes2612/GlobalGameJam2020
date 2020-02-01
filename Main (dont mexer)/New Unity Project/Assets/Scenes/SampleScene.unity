@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 6
+  m_WholeNumbers: 1
+  m_Value: 7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1955,8 +1955,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 6
+  m_WholeNumbers: 1
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2575,9 +2575,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c5a60e35ea7e3824f8376fab0473680b, type: 3}
   currentSprite: {fileID: 0}
   currentRepairAmount: 0
-  durabilitySlider: {fileID: 1691270126}
-  maxDurability: 0
-  currentDurability: 0
+  repairedAmmountSlider: {fileID: 1691270126}
+  maxRepairAmmount: 0
+  currentRepairAmmount: 0
   maxDurabilityArray: 050000000a00000014000000
   moneyItemValue: 02000000050000000a000000
   moneyText: {fileID: 384754227}
@@ -2942,8 +2942,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 6
+  m_WholeNumbers: 1
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3135,8 +3135,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 6
+  m_WholeNumbers: 1
+  m_Value: 4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3151,7 +3151,7 @@ GameObject:
   - component: {fileID: 1691270125}
   - component: {fileID: 1691270126}
   m_Layer: 5
-  m_Name: Durability Slider
+  m_Name: Repair amount slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

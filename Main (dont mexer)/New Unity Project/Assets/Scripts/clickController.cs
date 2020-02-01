@@ -14,25 +14,25 @@ public class clickController : MonoBehaviour
     //index do item que vais ser escolhido aleatoriamente
     [HideInInspector] public int itemIndex;
 
-    //imagem do item (lista) e escolha/aplicação
+    //imagem do item (lista) e do item escolhido
     public Sprite[] itemSpriteArray;
     [HideInInspector] public Sprite currentSprite;
 
-    //reparação atual que será feira ao clicar o botão
+    //valor de reparação atual. valor a adicionar quando se clicar o botão
     [HideInInspector] public int currentRepairAmount;
 
-    //slider de durabilidade e valor de durabilidade máxima
-    public Slider durabilitySlider;
-    [HideInInspector] public int maxDurability;
-    [HideInInspector] public int currentDurability;
+    //slider de nível de reparação, valor de valor de reparação máxima do objeto selecionado, valor de reparação atual do objeto selecionado, array de valores de reparação máximos dos objetos
+    public Slider repairedAmmountSlider;
+    [HideInInspector] public int maxRepairAmmount;
+    [HideInInspector] public int currentRepairAmmount;
     public int[] maxDurabilityArray;
 
-    //valor do item e dinheiro atual
+    //array de valores dos itens e dinheiro atual
     public int[] moneyItemValue;
     public Text moneyText;
     [HideInInspector] public int currentMoney;
 
-    //tools de reparação (lista) e durabilidade de estes tools
+    //array com todos os botões das tools, array de sliders de durability das tools, valor atual de durability (do slider da tool selecionada atualmente)
     public Button[] repairTools;
     public Slider[] slidersOfDurabilityTools;
     [HideInInspector] public float currentToolDurability;
@@ -69,13 +69,13 @@ public class clickController : MonoBehaviour
         currentSprite = itemSpriteArray[itemIndex];
         itemToFix.image.sprite = currentSprite;
 
-        //atribuição da durabilidade máxima do objeto
-        maxDurability = maxDurabilityArray[itemIndex];
-        durabilitySlider.maxValue = maxDurability;
+        //atribuição da reparação máxima do objeto
+        maxRepairAmmount = maxDurabilityArray[itemIndex];
+        repairedAmmountSlider.maxValue = maxRepairAmmount;
 
         //valores base de durabilidade para todos os objetos
-        durabilitySlider.value = 0;
-        currentDurability = 0;
+        repairedAmmountSlider.value = 0;
+        currentRepairAmmount = 0;
 
         //variavel usada na verificação se o anterio é igual ao atual
         previousItemIndex = itemIndex;
@@ -95,8 +95,8 @@ public class clickController : MonoBehaviour
                 currentToolDurability = slidersOfDurabilityTools[i].value;
                 if (currentToolDurability > 0)
                 {
-                    currentDurability = currentDurability + currentRepairAmount;
-                    durabilitySlider.value = currentDurability;
+                    currentRepairAmmount = currentRepairAmmount + currentRepairAmount;
+                    repairedAmmountSlider.value = currentRepairAmmount;
                 }
                 else
                 {
@@ -112,7 +112,7 @@ public class clickController : MonoBehaviour
         }
 
         //se o objeto é reparado, adiciona ao dinheiro e seleciona um novo item
-        if (currentDurability >= maxDurability)
+        if (currentRepairAmmount >= maxRepairAmmount)
         {
             currentMoney = currentMoney + moneyItemValue[itemIndex];
             moneyText.text = "Money : " + currentMoney;
