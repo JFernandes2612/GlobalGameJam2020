@@ -66,16 +66,26 @@ public class clickController : MonoBehaviour
 
     public void WasClicked()
     {
-        currentDurability = currentDurability + currentRepairAmount;
-        durabilitySlider.value = currentDurability;
+        
         for (int i=0; i<repairTools.Length; i++)
         {
             if (!repairTools[i].interactable)
             {
                 currentToolDurability = slidersOfDurabilityTools[i].value;
+                if (currentToolDurability > 0)
+                {
+                    currentDurability = currentDurability + currentRepairAmount;
+                    durabilitySlider.value = currentDurability;
+                }
+                else
+                {
+                    break;
+                }
                 currentToolDurability -= 1;
                 slidersOfDurabilityTools[i].value = currentToolDurability;
+                break;
             }
+
         }
 
         if (currentDurability >= maxDurability)
