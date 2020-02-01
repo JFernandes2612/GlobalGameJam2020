@@ -31,7 +31,7 @@ public class toolButton : MonoBehaviour
         sliderOfDurability.value = maxToolDurability;
         for (int i = 0; i < repairTools.Length; i++)
         {
-            Upgrades[i].interactable = false;
+           Upgrades[i].interactable = true;
         }
     }
 
@@ -48,13 +48,13 @@ public class toolButton : MonoBehaviour
         FindObjectOfType<clickController>().currentRepairAmount = repairAmount;
 
         //desativa o botão clicado mas ativa os outros
-        Upgrades[toolNumber].interactable = true;
+        //Upgrades[toolNumber].interactable = true;
         repairTools[toolNumber].interactable = false;
         for (int i=0; i<repairTools.Length; i++)
         {
             if (i != toolNumber)
             {
-                Upgrades[i].interactable = false;
+                //Upgrades[i].interactable = false;
                 repairTools[i].interactable = true;
             }
         }

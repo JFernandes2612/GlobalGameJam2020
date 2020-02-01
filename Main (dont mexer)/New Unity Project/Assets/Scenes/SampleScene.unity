@@ -1172,7 +1172,12 @@ MonoBehaviour:
   myDurabilityNow: 70
   myCost: 250
   myRepairAmount: 8
-  toolInUse: {fileID: 1280944467}
+  toolsInUse:
+  - {fileID: 1996469188}
+  - {fileID: 1136545815}
+  - {fileID: 1280944467}
+  - {fileID: 1834845126}
+  toolnumber: 2
 --- !u!1 &588770538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1507,12 @@ MonoBehaviour:
   myDurabilityNow: 40
   myCost: 500
   myRepairAmount: 16
-  toolInUse: {fileID: 1834845126}
+  toolsInUse:
+  - {fileID: 1996469188}
+  - {fileID: 1136545815}
+  - {fileID: 1280944467}
+  - {fileID: 1834845126}
+  toolnumber: 3
 --- !u!1 &973089766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1808,12 @@ MonoBehaviour:
   myDurabilityNow: 200
   myCost: 50
   myRepairAmount: 2
-  toolInUse: {fileID: 1996469188}
+  toolsInUse:
+  - {fileID: 1996469188}
+  - {fileID: 1136545815}
+  - {fileID: 1280944467}
+  - {fileID: 1834845126}
+  toolnumber: 0
 --- !u!1 &1027753030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,7 +4036,12 @@ MonoBehaviour:
   myDurabilityNow: 130
   myCost: 150
   myRepairAmount: 4
-  toolInUse: {fileID: 1136545815}
+  toolsInUse:
+  - {fileID: 1996469188}
+  - {fileID: 1136545815}
+  - {fileID: 1280944467}
+  - {fileID: 1834845126}
+  toolnumber: 1
 --- !u!1 &2075779773
 GameObject:
   m_ObjectHideFlags: 0
