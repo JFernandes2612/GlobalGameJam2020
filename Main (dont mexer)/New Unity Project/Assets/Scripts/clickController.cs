@@ -6,6 +6,8 @@ using UnityEngine.UI;
 //SCRIPT QUE CONTROLA A DURABILIDADE DE TUDO E O ESTADO DAS COISAS
 public class clickController : MonoBehaviour
 {
+    public float timerAnimationChange;
+
     [HideInInspector] public int previousItemIndex = -1;
 
     //item de reparação
@@ -16,7 +18,8 @@ public class clickController : MonoBehaviour
     [HideInInspector] public int itemIndex;
 
     //imagem do item (lista) e do item escolhido
-    public Sprite[] itemSpriteArray;
+    public Sprite[] itemSpriteArrayNotFixed;
+    public Sprite[] itemSpriteArrayFixed;
     [HideInInspector] public Sprite currentSprite;
 
     //valor de reparação atual. valor a adicionar quando se clicar o botão
@@ -40,6 +43,13 @@ public class clickController : MonoBehaviour
 
     //code
 
+    IEnumerator waitTime(float timer)
+    {
+        itemToFix.interactable = false;
+        yield return new WaitForSeconds(timer);
+        SelectNewItem();
+    }
+
     //quando o jogo começa
     void Start()
     {
@@ -58,16 +68,17 @@ public class clickController : MonoBehaviour
     //quando é necessario selecionar um novo item para ser reparado.
     public void SelectNewItem()
     {
+        itemToFix.interactable = true;
         //escolhe um item aleatório não escolhendo o mesmo que o anterior (para ser reparado)
-        itemIndex = Random.Range(0, itemSpriteArray.Length);
+        itemIndex = Random.Range(0, itemSpriteArrayNotFixed.Length);
 
         while (itemIndex == previousItemIndex)
         {
-            itemIndex = Random.Range(0, itemSpriteArray.Length);
+            itemIndex = Random.Range(0, itemSpriteArrayNotFixed.Length);
         }
         
         //escolhe a imagem corresponde a esse item que vai ser reparado
-        currentSprite = itemSpriteArray[itemIndex];
+        currentSprite = itemSpriteArrayNotFixed[itemIndex];
         itemToFix.image.sprite = currentSprite;
 
         //atribuição da reparação máxima do objeto
@@ -102,6 +113,7 @@ public class clickController : MonoBehaviour
                 }
                 else
                 {
+
                     break;
                 }
 
@@ -118,7 +130,8 @@ public class clickController : MonoBehaviour
         {
             currentMoney = currentMoney + moneyItemValue[itemIndex];
             moneyText.text = "Money : " + currentMoney;
-            SelectNewItem();
+            itemToFix.image.sprite = itemSpriteArrayFixed[itemIndex];
+            StartCoroutine(waitTime(timerAnimationChange));
         }
 
     }

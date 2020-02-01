@@ -28,12 +28,6 @@ public class repairTool : MonoBehaviour
         else
         {
             Debug.Log("Can't buy!");
-            /*
-            FindObjectOfType<clickController>().currentMoney -= myCost;
-            toolInUse.GetComponent<toolButton>().maxToolDurability = myDurabilityNow;
-            toolInUse.GetComponent<toolButton>().repairAmount = myRepairAmount;
-            toolInUse.GetComponent<toolButton>().Start2();
-            */
         }
     }
 }
