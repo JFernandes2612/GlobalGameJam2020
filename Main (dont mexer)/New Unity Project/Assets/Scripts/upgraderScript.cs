@@ -9,16 +9,17 @@ public class upgraderScript : MonoBehaviour
     public int myDurabilityNow;
     public int myCost;
     public int myRepairAmount;
-    public Button toolInUse;
+    public Button[] toolsInUse;
+    public int toolnumber;
 
     public void IGotClicked()
     {
         if (FindObjectOfType<clickController>().currentMoney >= myCost)
         {
             FindObjectOfType<clickController>().currentMoney -= myCost;
-            toolInUse.GetComponent<toolButton>().maxToolDurability = myDurabilityNow;
-            toolInUse.GetComponent<toolButton>().repairAmount = myRepairAmount;
-            toolInUse.GetComponent<toolButton>().Start2();
+            toolsInUse[toolnumber].GetComponent<toolButton>().maxToolDurability = myDurabilityNow;
+            toolsInUse[toolnumber].GetComponent<toolButton>().repairAmount = myRepairAmount;
+            toolsInUse[toolnumber].GetComponent<toolButton>().Start2();
         }
         else
         {
