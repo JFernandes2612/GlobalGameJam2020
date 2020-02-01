@@ -170,12 +170,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 11330323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
+  m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 200
-  myCost: 50
-  myRepairAmount: 2
+  myCost: 0
+  myDurabilityNow: 100
   toolsInUse:
   - {fileID: 1996469188}
   - {fileID: 1136545815}
@@ -226,7 +225,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11330325}
-        m_MethodName: IGotClicked
+        m_MethodName: ClickToRepair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -825,7 +824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364803260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2029196208}
@@ -1504,7 +1503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 70
   myCost: 250
   myRepairAmount: 8
   toolsInUse:
@@ -1789,18 +1787,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 860556703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
+  m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 40
-  myCost: 500
-  myRepairAmount: 16
-  toolsInUse:
-  - {fileID: 1996469188}
-  - {fileID: 1136545815}
-  - {fileID: 1280944467}
-  - {fileID: 1834845126}
-  toolnumber: 3
+  myCost: 0
+  myDurabilityNow: 0
+  toolsInUse: []
+  toolnumber: 0
 --- !u!114 &860556706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,7 +1838,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 860556705}
-        m_MethodName: IGotClicked
+        m_MethodName: ClickToRepair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1915,8 +1908,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873852654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -170, y: 9.076405, z: -347.50833}
-  m_LocalScale: {x: 61.888657, y: 45.009933, z: 45.009933}
+  m_LocalPosition: {x: -133.11, y: 7.501, z: -347.50833}
+  m_LocalScale: {x: 56.53142, y: 42.759438, z: 45.009933}
   m_Children:
   - {fileID: 922615252}
   - {fileID: 364803261}
@@ -1949,7 +1942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922615251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1013296339}
@@ -2099,7 +2092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 40
   myCost: 500
   myRepairAmount: 16
   toolsInUse:
@@ -2323,7 +2315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 200
   myCost: 50
   myRepairAmount: 2
   toolsInUse:
@@ -2765,8 +2756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 86.79, y: 10.23}
+  m_SizeDelta: {x: 181.62, y: 120.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280944467
 MonoBehaviour:
@@ -2840,8 +2831,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4c12240690d17442a0084f3510aa83f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2939,18 +2930,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288458275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
+  m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 130
-  myCost: 150
-  myRepairAmount: 4
-  toolsInUse:
-  - {fileID: 1996469188}
-  - {fileID: 1136545815}
-  - {fileID: 1280944467}
-  - {fileID: 1834845126}
-  toolnumber: 1
+  myCost: 0
+  myDurabilityNow: 0
+  toolsInUse: []
+  toolnumber: 0
 --- !u!114 &1288458278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,7 +2981,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1288458277}
-        m_MethodName: IGotClicked
+        m_MethodName: ClickToRepair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3555,7 +3541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387916771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.8, z: 0}
+  m_LocalPosition: {x: 0, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 952093817}
@@ -4279,18 +4265,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802192608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
+  m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 70
-  myCost: 250
-  myRepairAmount: 8
-  toolsInUse:
-  - {fileID: 1996469188}
-  - {fileID: 1136545815}
-  - {fileID: 1280944467}
-  - {fileID: 1834845126}
-  toolnumber: 2
+  myCost: 0
+  myDurabilityNow: 0
+  toolsInUse: []
+  toolnumber: 0
 --- !u!114 &1802192611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,7 +4316,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1802192610}
-        m_MethodName: IGotClicked
+        m_MethodName: ClickToRepair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4954,7 +4935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDurabilityNow: 130
   myCost: 150
   myRepairAmount: 4
   toolsInUse:

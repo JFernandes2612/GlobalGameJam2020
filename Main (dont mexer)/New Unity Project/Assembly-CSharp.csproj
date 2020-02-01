@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\clickController.cs" />
+    <Compile Include="Assets\Scripts\repairTool.cs" />
     <Compile Include="Assets\Scripts\toolButton.cs" />
     <Compile Include="Assets\Scripts\upgraderScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
