@@ -2195,7 +2195,7 @@ MonoBehaviour:
   toolUseSoundsArray:
   - {fileID: 8300000, guid: 95975b47a5043dc4a869c6ee4b71e621, type: 3}
   - {fileID: 8300000, guid: cf4d6374a1e95524f9228a89b0746609, type: 3}
-  - {fileID: 8300000, guid: d562f0a8ec22bb74abbcce8c3f277fa1, type: 3}
+  - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
   repairAmount: 2
@@ -2432,7 +2432,7 @@ MonoBehaviour:
   toolUseSoundsArray:
   - {fileID: 8300000, guid: 95975b47a5043dc4a869c6ee4b71e621, type: 3}
   - {fileID: 8300000, guid: cf4d6374a1e95524f9228a89b0746609, type: 3}
-  - {fileID: 8300000, guid: d562f0a8ec22bb74abbcce8c3f277fa1, type: 3}
+  - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
   repairAmount: 4
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   toolUseSoundsArray:
   - {fileID: 8300000, guid: 95975b47a5043dc4a869c6ee4b71e621, type: 3}
   - {fileID: 8300000, guid: cf4d6374a1e95524f9228a89b0746609, type: 3}
-  - {fileID: 8300000, guid: d562f0a8ec22bb74abbcce8c3f277fa1, type: 3}
+  - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
   repairAmount: 8
@@ -4144,7 +4144,7 @@ MonoBehaviour:
   toolUseSoundsArray:
   - {fileID: 8300000, guid: 95975b47a5043dc4a869c6ee4b71e621, type: 3}
   - {fileID: 8300000, guid: cf4d6374a1e95524f9228a89b0746609, type: 3}
-  - {fileID: 8300000, guid: d562f0a8ec22bb74abbcce8c3f277fa1, type: 3}
+  - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
   repairAmount: 1
