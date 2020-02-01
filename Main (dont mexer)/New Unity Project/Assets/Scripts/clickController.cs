@@ -10,6 +10,7 @@ public class clickController : MonoBehaviour
 
     //item de reparação
     public Button itemToFix;
+    public AudioSource itemToFixAudioSource;
 
     //index do item que vais ser escolhido aleatoriamente
     [HideInInspector] public int itemIndex;
@@ -21,10 +22,10 @@ public class clickController : MonoBehaviour
     //valor de reparação atual. valor a adicionar quando se clicar o botão
     [HideInInspector] public int currentRepairAmount;
 
-    //slider de nível de reparação, valor de valor de reparação máxima do objeto selecionado, valor de reparação atual do objeto selecionado, array de valores de reparação máximos dos objetos
+    //slider de nível de reparação, nível de reparação máxima (valor quando o objeto está reparado) do objeto a ser reparado, nível de reparação atual do objeto selecionado, array de valores de reparação máximos dos objetos
     public Slider repairedAmmountSlider;
-    [HideInInspector] public int maxRepairAmmount;
-    [HideInInspector] public int currentRepairAmmount;
+    [HideInInspector] public int maxRepairLevel;
+    [HideInInspector] public int currentRepairLevel;
     public int[] maxDurabilityArray;
 
     //array de valores dos itens e dinheiro atual
@@ -70,12 +71,12 @@ public class clickController : MonoBehaviour
         itemToFix.image.sprite = currentSprite;
 
         //atribuição da reparação máxima do objeto
-        maxRepairAmmount = maxDurabilityArray[itemIndex];
-        repairedAmmountSlider.maxValue = maxRepairAmmount;
+        maxRepairLevel = maxDurabilityArray[itemIndex];
+        repairedAmmountSlider.maxValue = maxRepairLevel;
 
         //valores base de durabilidade para todos os objetos
         repairedAmmountSlider.value = 0;
-        currentRepairAmmount = 0;
+        currentRepairLevel = 0;
 
         //variavel usada na verificação se o anterio é igual ao atual
         previousItemIndex = itemIndex;
@@ -95,15 +96,16 @@ public class clickController : MonoBehaviour
                 currentToolDurability = slidersOfDurabilityTools[i].value;
                 if (currentToolDurability > 0)
                 {
-                    currentRepairAmmount = currentRepairAmmount + currentRepairAmount;
-                    repairedAmmountSlider.value = currentRepairAmmount;
+                    itemToFixAudioSource.Play();
+                    currentRepairLevel = currentRepairLevel + currentRepairAmount;
+                    repairedAmmountSlider.value = currentRepairLevel;
                 }
                 else
                 {
                     break;
                 }
 
-                //no caso de repara o objeto diminui a durabilidade da ferramenta(tool) em 1
+                //no caso de reparar o objeto, diminui a durabilidade da ferramenta(tool) em 1
                 currentToolDurability -= 1;
                 slidersOfDurabilityTools[i].value = currentToolDurability;
                 break;
@@ -112,7 +114,7 @@ public class clickController : MonoBehaviour
         }
 
         //se o objeto é reparado, adiciona ao dinheiro e seleciona um novo item
-        if (currentRepairAmmount >= maxRepairAmmount)
+        if (currentRepairLevel >= maxRepairLevel)
         {
             currentMoney = currentMoney + moneyItemValue[itemIndex];
             moneyText.text = "Money : " + currentMoney;

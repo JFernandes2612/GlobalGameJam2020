@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class toolButton : MonoBehaviour
 {
+    //array de sons das tools, e som selecionado
+    public AudioClip[] toolUseSoundsArray;
+    [HideInInspector] public AudioClip currentToolSound;
+
     //reparação do objeto
     public int repairAmount;
 
@@ -44,12 +48,17 @@ public class toolButton : MonoBehaviour
 
     public void onClick()
     {
+        //define o som atual do botão do item a reparar como sendo aquele do tool number
+        currentToolSound = toolUseSoundsArray[toolNumber];
+        FindObjectOfType<clickController>().itemToFixAudioSource.clip = currentToolSound;
+
         //altera a variavel na outra script (quantidade de reparação(nivel))
         FindObjectOfType<clickController>().currentRepairAmount = repairAmount;
 
         //desativa o botão clicado mas ativa os outros
         //Upgrades[toolNumber].interactable = true;
         repairTools[toolNumber].interactable = false;
+
         for (int i=0; i<repairTools.Length; i++)
         {
             if (i != toolNumber)
