@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 //SCRIPT QUE CONTROLA O BOTÃO DAS TOOLS E ATRIBUI A DURABILIDADE DADA AO OBJETO NA clickController.cs
 
-public class toolButton : MonoBehaviour
+public class ToolButton : MonoBehaviour
 {
     //array de sons das tools, e som selecionado
     public AudioClip[] toolUseSoundsArray;
@@ -46,14 +46,14 @@ public class toolButton : MonoBehaviour
         sliderOfDurability.value = maxToolDurability;
     }
 
-    public void onClick()
+    public void OnClick()
     {
         //define o som atual do botão do item a reparar como sendo aquele do tool number
         currentToolSound = toolUseSoundsArray[toolNumber];
-        FindObjectOfType<clickController>().itemToFixAudioSource.clip = currentToolSound;
+        FindObjectOfType<ClickController>().itemToFixAudioSource.clip = currentToolSound;
 
         //altera a variavel na outra script (quantidade de reparação(nivel))
-        FindObjectOfType<clickController>().currentRepairAmount = repairAmount;
+        FindObjectOfType<ClickController>().currentRepairAmount = repairAmount;
 
         //desativa o botão clicado mas ativa os outros
         //Upgrades[toolNumber].interactable = true;

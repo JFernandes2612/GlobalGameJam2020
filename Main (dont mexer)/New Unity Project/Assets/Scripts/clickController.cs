@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //SCRIPT QUE CONTROLA A DURABILIDADE DE TUDO E O ESTADO DAS COISAS
-public class clickController : MonoBehaviour
+public class ClickController : MonoBehaviour
 {
     public float timerAnimationChange;
 
@@ -41,9 +41,58 @@ public class clickController : MonoBehaviour
     public Slider[] slidersOfDurabilityTools;
     [HideInInspector] public float currentToolDurability;
 
-    //code
+    //coisinhas para o passive income:
+    [HideInInspector] public float passiveIncomeTime;
+    [HideInInspector] public int passiveIncomeAmount;
+    public Button incomeTimeButton;
+    public Text tickTime;
+    public Button incomeAmountIncreaseButton;
+    public Text incomePerTick;
+    //end deste snippet
 
-    IEnumerator waitTime(float timer)
+
+    IEnumerator PassiveIncomeTimer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(passiveIncomeTime);
+            currentMoney += passiveIncomeAmount;
+        }
+    }
+
+    public void ReducePassiveIncomeTime()
+    {
+        if (passiveIncomeTime > 0.5f)               // can level up
+        {
+            passiveIncomeTime -= 0.5f;
+        }
+
+        if (passiveIncomeTime == 0.5f)              // is maxed out
+        {
+            incomeTimeButton.interactable = false;
+            incomeTimeButton.GetComponentInChildren<Text>().text = "Max LVL";
+        }
+
+        tickTime.text = "Tick Time: " + passiveIncomeTime + " secs";                //atualiza o texto do tempo de income
+    }
+
+    public void IncreasePassiveIncomeAmount()
+    {
+        if (passiveIncomeAmount < 20)               // can level up
+        {
+            passiveIncomeAmount += 1;
+        }
+
+        if (passiveIncomeAmount == 20)              // is maxed out
+        {
+            incomeAmountIncreaseButton.interactable = false;
+            incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = "Max LVL";
+        }
+
+        incomePerTick.text = "Income: " + passiveIncomeAmount + " per tick";                //atualiza o texto do income per tick
+    }
+
+    IEnumerator WaitTime(float timer)               //timer após reparar cada objeto
     {
         itemToFix.interactable = false;
         yield return new WaitForSeconds(timer);
@@ -56,6 +105,13 @@ public class clickController : MonoBehaviour
         //inicialmente o dinheiro inicial é zero
         currentMoney = 0;
         moneyText.text = "Money : " + currentMoney;
+        
+        passiveIncomeTime = 10.0f;
+        tickTime.text = "Tick Time: "+ passiveIncomeTime + " secs";
+        passiveIncomeAmount = 1;
+        incomePerTick.text = "Income: " + passiveIncomeAmount + " per tick";
+        StartCoroutine(PassiveIncomeTimer());
+
         SelectNewItem();
     }
 
@@ -131,7 +187,7 @@ public class clickController : MonoBehaviour
             currentMoney = currentMoney + moneyItemValue[itemIndex];
             moneyText.text = "Money : " + currentMoney;
             itemToFix.image.sprite = itemSpriteArrayFixed[itemIndex];
-            StartCoroutine(waitTime(timerAnimationChange));
+            StartCoroutine(WaitTime(timerAnimationChange));
         }
 
     }
