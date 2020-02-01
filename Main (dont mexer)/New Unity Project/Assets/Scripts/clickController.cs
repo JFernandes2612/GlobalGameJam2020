@@ -28,6 +28,10 @@ public class clickController : MonoBehaviour
     public Text moneyText;
     [HideInInspector] public int currentMoney;
 
+    public Button[] repairTools;
+
+    public Slider[] slidersOfDurabilityTools;
+    [HideInInspector] public float currentToolDurability;
     void Start()
     {
         currentMoney = 0;
@@ -64,13 +68,23 @@ public class clickController : MonoBehaviour
     {
         currentDurability = currentDurability + currentRepairAmount;
         durabilitySlider.value = currentDurability;
-        
+        for (int i=0; i<repairTools.Length; i++)
+        {
+            if (!repairTools[i].interactable)
+            {
+                currentToolDurability = slidersOfDurabilityTools[i].value;
+                currentToolDurability -= 1;
+                slidersOfDurabilityTools[i].value = currentToolDurability;
+            }
+        }
+
         if (currentDurability >= maxDurability)
         {
             currentMoney = currentMoney + moneyItemValue[itemIndex];
             moneyText.text = "Money : " + currentMoney;
             SelectNewItem();
         }
+
     }
 
 }
