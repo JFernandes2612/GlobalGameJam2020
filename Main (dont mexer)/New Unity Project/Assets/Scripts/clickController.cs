@@ -72,8 +72,8 @@ public class clickController : MonoBehaviour
     IEnumerator Timing2()               
     {
         Debug.Log(2);
-        image.GetComponent<Animator>().SetTrigger("Trigeer");
-        yield return new WaitForSeconds(1f);
+        //image.GetComponent<Animator>().SetTrigger("Trigeer");
+        yield return new WaitForSeconds(1.5f);
         itemToFixGameObject.transform.localScale = new Vector2(0.0495f, 0.0495f);
     }
     IEnumerator PassiveIncomeTimer()
