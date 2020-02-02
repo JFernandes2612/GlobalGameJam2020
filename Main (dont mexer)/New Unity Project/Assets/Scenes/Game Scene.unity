@@ -1143,7 +1143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Decrease - 2$
+  m_Text: Improve - 2$
 --- !u!222 &336739637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3037,7 +3037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Increase - 2$
+  m_Text: Improve - 2$
 --- !u!222 &1005694243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4518,9 +4518,9 @@ MonoBehaviour:
   - {fileID: 1675944732}
   currentToolDurability: 0
   baseCostIncrement: 2
-  baseCostIncrementText: 'Increase - '
+  baseCostIncrementText: 'Improve -  '
   baseCostDecrement: 2
-  baseCostDecrementText: 'Decrease - '
+  baseCostDecrementText: 'Improve - '
   passiveIncomeTime: 0
   passiveIncomeAmount: 0
   incomeTimeButton: {fileID: 1750498870}
