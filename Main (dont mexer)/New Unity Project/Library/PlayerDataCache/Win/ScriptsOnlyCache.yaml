@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - SceneChanger
     - clickController
+    - musicController
     - repairTool
     - toolButton
     - upgraderScript
@@ -64,9 +65,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,11 +132,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13084}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,6 +168,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -182,9 +187,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 12702}
+    - Class: 114
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -231,9 +238,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,9 +287,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -329,9 +336,58 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13084}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Tutorial 4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11208}
+    - Class: 114
+      Script: {instanceID: 11324}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 11778}
+    - Class: 114
+      Script: {instanceID: 12192}
+    - Class: 114
+      Script: {instanceID: 12702}
+    - Class: 114
+      Script: {instanceID: 13084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -621,6 +677,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 442a61cbbee72a49c3cff04b4f08ad63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: musicController
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -806,5 +868,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tutorial 1.unity
   - Assets/Scenes/Tutorial 2.unity
   - Assets/Scenes/Tutorial 3.unity
+  - Assets/Scenes/Tutorial 4.unity
   - Assets/Scenes/Game Scene.unity
   playerPath: C:/Users/Retchut/Desktop/test build/New Unity Project.exe
