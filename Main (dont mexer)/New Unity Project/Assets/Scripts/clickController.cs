@@ -6,13 +6,13 @@ using UnityEngine.UI;
 //SCRIPT QUE CONTROLA A DURABILIDADE DE TUDO E O ESTADO DAS COISAS
 public class clickController : MonoBehaviour
 {
-    public float timerAnimationChange;
 
     [HideInInspector] public int previousItemIndex = -1;
 
     //item de reparação
     public Button itemToFix;
     public AudioSource itemToFixAudioSource;
+    public GameObject itemToFixGameObject;
 
     //index do item que vais ser escolhido aleatoriamente
     [HideInInspector] public int itemIndex;
@@ -23,18 +23,19 @@ public class clickController : MonoBehaviour
     [HideInInspector] public Sprite currentSprite;
 
     //valor de reparação atual. valor a adicionar quando se clicar o botão
-    [HideInInspector] public int currentRepairAmount;
+    [HideInInspector] public float currentRepairAmount;
+    [HideInInspector] public float incre = 0f;
 
     //slider de nível de reparação, nível de reparação máxima (valor quando o objeto está reparado) do objeto a ser reparado, nível de reparação atual do objeto selecionado, array de valores de reparação máximos dos objetos
     public Slider repairedAmmountSlider;
-    [HideInInspector] public int maxRepairLevel;
-    [HideInInspector] public int currentRepairLevel;
+    [HideInInspector] public float maxRepairLevel;
+    [HideInInspector] public float currentRepairLevel;
     public int[] maxDurabilityArray;
 
     //array de valores dos itens e dinheiro atual
-    public int[] moneyItemValue;
+    public float[] moneyItemValue;
     public Text moneyText;
-    [HideInInspector] public int currentMoney;
+    [HideInInspector] public float currentMoney;
 
     //array com todos os botões das tools, array de sliders de durability das tools, valor atual de durability (do slider da tool selecionada atualmente)
     public Button[] repairTools;
@@ -42,15 +43,41 @@ public class clickController : MonoBehaviour
     [HideInInspector] public float currentToolDurability;
 
     //coisinhas para o passive income:
+    public int baseCostIncrement;
+    public string baseCostIncrementText;
+
+    public int baseCostDecrement;
+    public string baseCostDecrementText;
+
     [HideInInspector] public float passiveIncomeTime;
     [HideInInspector] public int passiveIncomeAmount;
     public Button incomeTimeButton;
     public Text tickTime;
     public Button incomeAmountIncreaseButton;
     public Text incomePerTick;
+
+
+    public Image image;
+
+    public Sprite[] hands;
+
     //end deste snippet
-
-
+    IEnumerator Timing1()               
+    {
+        Debug.Log(1);
+        image.GetComponent<Animator>().SetTrigger("Trigeer");
+        image.GetComponent<Animator>().Play("ArmAnimation");
+        yield return new WaitForSeconds(1.2f);
+        itemToFixGameObject.transform.localScale = new Vector2(0f, 0f);
+    }
+    IEnumerator Timing2()               
+    {
+        Debug.Log(2);
+        image.GetComponent<Animator>().SetTrigger("Trigeer");
+        image.GetComponent<Animator>().Play("ArmAnimation");
+        yield return new WaitForSeconds(1f);
+        itemToFixGameObject.transform.localScale = new Vector2(0.0495f, 0.0495f);
+    }
     IEnumerator PassiveIncomeTimer()
     {
         while (true)
@@ -62,38 +89,61 @@ public class clickController : MonoBehaviour
 
     public void ReducePassiveIncomeTime()
     {
+
         if (passiveIncomeTime > 0.5f)               // can level up
         {
-            passiveIncomeTime -= 0.5f;
+            if (currentMoney >= baseCostDecrement)
+            {
+                currentMoney -= baseCostDecrement;
+                passiveIncomeTime -= 0.5f;
+                baseCostDecrement *= 2;
+                incomeTimeButton.GetComponentInChildren<Text>().text = baseCostDecrementText + (baseCostDecrement).ToString() + "$";
+            }
+            else
+            {
+                Debug.Log("Can't buy!");
+            }
         }
 
-        if (passiveIncomeTime == 0.5f)              // is maxed out
+        if (passiveIncomeTime <= 0.5f)              // is maxed out
         {
             incomeTimeButton.interactable = false;
             incomeTimeButton.GetComponentInChildren<Text>().text = "Max LVL";
         }
 
-        tickTime.text = "Tick Time: " + passiveIncomeTime + " secs";                //atualiza o texto do tempo de income
+        tickTime.text = "Tick Time: " + passiveIncomeTime + " s";                //atualiza o texto do tempo de income
     }
 
     public void IncreasePassiveIncomeAmount()
     {
-        if (passiveIncomeAmount < 20)               // can level up
+
+        if (passiveIncomeAmount < 1024)               // can level up
         {
-            passiveIncomeAmount += 1;
+            if (currentMoney >= baseCostIncrement)
+            {
+                currentMoney -= baseCostIncrement;
+                passiveIncomeAmount *= 2;
+                baseCostIncrement *= 2;
+                incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = baseCostDecrementText + (baseCostIncrement).ToString() + "$";
+            }
+            else
+            {
+                Debug.Log("Can't buy!");
+            }
         }
 
-        if (passiveIncomeAmount == 20)              // is maxed out
+        if (passiveIncomeAmount >= 1024)              // is maxed out
         {
             incomeAmountIncreaseButton.interactable = false;
             incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = "Max LVL";
         }
 
-        incomePerTick.text = "Income: " + passiveIncomeAmount + "Ǝs/" + passiveIncomeTime + " secs";                //atualiza o texto do income per tick
+        incomePerTick.text = "Income: " + passiveIncomeAmount + "$/" + passiveIncomeTime + " s";                //atualiza o texto do income per tick
     }
 
     IEnumerator WaitTime(float timer)               //timer após reparar cada objeto
     {
+
         itemToFix.interactable = false;
         yield return new WaitForSeconds(timer);
         SelectNewItem();
@@ -104,20 +154,21 @@ public class clickController : MonoBehaviour
     {
         //inicialmente o dinheiro inicial é zero
         currentMoney = 0;
-        moneyText.text = "Money : " + "\n" + currentMoney + "Ǝs"; ;
+        moneyText.text = "Money : " + "\n" + currentMoney + "$"; ;
         
         passiveIncomeTime = 10.0f;
-        tickTime.text = "Tick Time: "+ passiveIncomeTime + " secs";
+        tickTime.text = "Tick Time: "+ passiveIncomeTime + " s";
         passiveIncomeAmount = 1;
-        incomePerTick.text = "Income: " + passiveIncomeAmount + "Ǝs/10 secs";
+        incomePerTick.text = "Income: " + passiveIncomeAmount + "$/10s";
         StartCoroutine(PassiveIncomeTimer());
-
+        itemToFixGameObject.transform.localScale = new Vector2(0f, 0f);
         SelectNewItem();
     }
 
     private void FixedUpdate()
     {
-        moneyText.text = "Money : " + "\n" + currentMoney + "Ǝs";
+        moneyText.text = "Money : " + "\n" + currentMoney + "$";
+        incomePerTick.text = "Income: " + passiveIncomeAmount + "$/" + passiveIncomeTime + " s";
     }
 
 
@@ -139,15 +190,18 @@ public class clickController : MonoBehaviour
 
         //atribuição da reparação máxima do objeto
         maxRepairLevel = maxDurabilityArray[itemIndex];
+        incre += 1;
+        maxRepairLevel = Mathf.Round(maxRepairLevel + 0.03f * incre * maxRepairLevel);
         repairedAmmountSlider.maxValue = maxRepairLevel;
 
         //valores base de durabilidade para todos os objetos
-        repairedAmmountSlider.value = 0;
-        currentRepairLevel = 0;
+        repairedAmmountSlider.value = 0f;
+        currentRepairLevel = 0f;
 
         //variavel usada na verificação se o anterio é igual ao atual
         previousItemIndex = itemIndex;
-       
+        StartCoroutine(Timing2());
+        image.sprite = hands[Random.Range(0, hands.Length)];
     }
 
 
@@ -169,7 +223,6 @@ public class clickController : MonoBehaviour
                 }
                 else
                 {
-
                     break;
                 }
 
@@ -184,10 +237,11 @@ public class clickController : MonoBehaviour
         //se o objeto é reparado, adiciona ao dinheiro e seleciona um novo item
         if (currentRepairLevel >= maxRepairLevel)
         {
-            currentMoney = currentMoney + moneyItemValue[itemIndex];
+            currentMoney = Mathf.Round(currentMoney + (moneyItemValue[itemIndex] + incre * 0.02f * moneyItemValue[itemIndex]));
             moneyText.text = "Money : " + currentMoney;
             itemToFix.image.sprite = itemSpriteArrayFixed[itemIndex];
-            StartCoroutine(WaitTime(timerAnimationChange));
+            StartCoroutine(Timing1());
+            StartCoroutine(WaitTime(1.2f));
         }
 
     }

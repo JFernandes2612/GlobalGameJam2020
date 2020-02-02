@@ -14,12 +14,37 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu Scene");
+    }
+
+    public void Tutorial1()
+    {
+        SceneManager.LoadScene("Tutorial 1");
+    }
+
+    public void Tutorial2()
+    {
+        SceneManager.LoadScene("Tutorial 2");
+    }
+
+    public void Tutorial3()
+    {
+        SceneManager.LoadScene("Tutorial 3");
     }
 
     public void GoToGameScene()
     {
         SceneManager.LoadScene("Game Scene");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

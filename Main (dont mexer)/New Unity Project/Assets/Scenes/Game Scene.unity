@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 0
+  myCost: 5
   myDurabilityNow: 100
   toolsInUse:
   - {fileID: 1996469188}
@@ -202,10 +202,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Repair Duct Tape - 5
+  m_Text: Repair Duct Tape - 5$
 --- !u!222 &22008559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -600,8 +600,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 417340105}
-  - {fileID: 1321635835}
   - {fileID: 82860356}
+  - {fileID: 1321635835}
   - {fileID: 1667251941}
   - {fileID: 437278905}
   - {fileID: 873852655}
@@ -610,7 +610,6 @@ RectTransform:
   - {fileID: 384754226}
   - {fileID: 943082588}
   - {fileID: 1649001210}
-  - {fileID: 591214230}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -642,6 +641,7 @@ GameObject:
   - component: {fileID: 82860356}
   - component: {fileID: 82860358}
   - component: {fileID: 82860357}
+  - component: {fileID: 82860359}
   m_Layer: 5
   m_Name: arm
   m_TagString: Untagged
@@ -661,11 +661,11 @@ RectTransform:
   m_LocalScale: {x: 6.442428, y: 6.442428, z: 6.442428}
   m_Children: []
   m_Father: {fileID: 82375932}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 0.000015259}
+  m_AnchoredPosition: {x: 0.000030518, y: 222.71}
   m_SizeDelta: {x: 124.18, y: 69.884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82860357
@@ -704,6 +704,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82860355}
   m_CullTransparentMesh: 0
+--- !u!95 &82860359
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82860355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 47739984c0c4c4745a797fcd80755afd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &83384527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,11 +1054,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1047,7 +1066,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Repair Power Drill - 50
+  m_Text: Repair Power Drill - 50$
 --- !u!222 &229554040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1112,11 +1131,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1124,7 +1143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Decrease
+  m_Text: Improve - 2$
 --- !u!222 &336739637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1162,6 +1181,7 @@ Transform:
   m_Children:
   - {fileID: 2029196208}
   - {fileID: 1288458276}
+  - {fileID: 712400932}
   m_Father: {fileID: 873852655}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1221,7 +1241,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
@@ -1233,7 +1253,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "money:\n10000 \u018Es"
+  m_Text: 'money:
+
+    10000 $s'
 --- !u!222 &384754228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1590,7 +1612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1602,7 +1624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Wrench - 250
+  m_Text: Upgrade Wrench - 250$
 --- !u!222 &463260899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1973,10 +1995,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2063,6 +2085,16 @@ MonoBehaviour:
   - {fileID: 1834845126}
   toolnumber: 2
   mainButton: {fileID: 1322046903}
+  level: 1
+  textLv: {fileID: 2052061655}
+  str: Wrench LV
+  me: {fileID: 572240297}
+  defaultRepairAmount: 10
+  defaultCost: 250
+  defaultText: 'Upgrade Wrench - '
+  text: {fileID: 463260898}
+  lv10: {fileID: 21300000, guid: fcb90b4374d5da64996fe13526806e98, type: 3}
+  lv20: {fileID: 21300000, guid: 3d7d5aaccf324fa4b8ff24110fcb6a53, type: 3}
 --- !u!1 &575160057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2151,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2131,7 +2163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Repair Hammer - 15
+  m_Text: Repair Hammer - 15$
 --- !u!222 &575160060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2225,7 +2257,7 @@ GameObject:
   - component: {fileID: 591214232}
   - component: {fileID: 591214231}
   m_Layer: 5
-  m_Name: NameText
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2238,16 +2270,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591214229}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.720703}
+  m_LocalScale: {x: 0.017689276, y: 0.023386652, z: 0.02221732}
   m_Children: []
-  m_Father: {fileID: 82375932}
-  m_RootOrder: 11
+  m_Father: {fileID: 1387916772}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255.29, y: -116.33}
+  m_AnchoredPosition: {x: 6.8705444, y: -1.3459854}
   m_SizeDelta: {x: 158.59, y: 27.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591214231
@@ -2269,21 +2301,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Power Tool - 0/5 LVLs
-
-    Repairing Power: 5
+  m_Text: 'Power Tool LV 1
 
 '
 --- !u!222 &591214232
@@ -2293,6 +2323,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591214229}
+  m_CullTransparentMesh: 0
+--- !u!1 &712400931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712400932}
+  - component: {fileID: 712400934}
+  - component: {fileID: 712400933}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &712400932
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712400931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.720703}
+  m_LocalScale: {x: 0.017692314, y: 0.023390668, z: 0.022221135}
+  m_Children: []
+  m_Father: {fileID: 364803261}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.89, y: 2.17}
+  m_SizeDelta: {x: 158.59, y: 27.34}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &712400933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712400931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Hammer LV 1
+
+'
+--- !u!222 &712400934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712400931}
   m_CullTransparentMesh: 0
 --- !u!1 &824213214
 GameObject:
@@ -2350,7 +2459,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -2423,7 +2532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 0
+  myCost: 50
   myDurabilityNow: 20
   toolsInUse:
   - {fileID: 1996469188}
@@ -2451,11 +2560,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2498,7 +2607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2611,7 +2720,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
@@ -2661,6 +2770,7 @@ Transform:
   m_Children:
   - {fileID: 1013296339}
   - {fileID: 11330324}
+  - {fileID: 1008308347}
   m_Father: {fileID: 873852655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2759,10 +2869,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2849,6 +2959,16 @@ MonoBehaviour:
   - {fileID: 1834845126}
   toolnumber: 3
   mainButton: {fileID: 1322046903}
+  level: 1
+  textLv: {fileID: 591214231}
+  str: Power Tool LV
+  me: {fileID: 952093818}
+  defaultRepairAmount: 15
+  defaultCost: 500
+  defaultText: 'Upgrade Power Drill - '
+  text: {fileID: 1314148749}
+  lv10: {fileID: 21300000, guid: f20a7c42a97243b4b9536c5c542d9bfb, type: 3}
+  lv20: {fileID: 21300000, guid: 653c1e392161aea4d88fa7aa293bd729, type: 3}
 --- !u!1 &1005694240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +3025,84 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 8
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Improve - 2$
+--- !u!222 &1005694243
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005694240}
+  m_CullTransparentMesh: 0
+--- !u!1 &1008308346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1008308347}
+  - component: {fileID: 1008308349}
+  - component: {fileID: 1008308348}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1008308347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008308346}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.720703}
+  m_LocalScale: {x: 0.017692314, y: 0.023390668, z: 0.022221135}
+  m_Children: []
+  m_Father: {fileID: 922615252}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.88, y: 3.64}
+  m_SizeDelta: {x: 158.59, y: 27.34}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1008308348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008308346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2917,14 +3114,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Increase
---- !u!222 &1005694243
+  m_Text: 'Duct Tape LV 1
+
+'
+--- !u!222 &1008308349
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005694240}
+  m_GameObject: {fileID: 1008308346}
   m_CullTransparentMesh: 0
 --- !u!1 &1008620694
 GameObject:
@@ -3060,10 +3259,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3141,7 +3340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 0
+  myCost: 50
   myRepairAmountIncrement: 1
   toolsInUse:
   - {fileID: 1996469188}
@@ -3150,6 +3349,16 @@ MonoBehaviour:
   - {fileID: 1834845126}
   toolnumber: 0
   mainButton: {fileID: 1322046903}
+  level: 1
+  textLv: {fileID: 1008308348}
+  str: Duct Tape LV
+  me: {fileID: 1013296340}
+  defaultRepairAmount: 1
+  defaultCost: 50
+  defaultText: 'Upgrade Duct Tape - '
+  text: {fileID: 1489286233}
+  lv10: {fileID: 0}
+  lv20: {fileID: 21300000, guid: 7cc1dbcb6dabe4a4e936f7f1b66b07b2, type: 3}
 --- !u!1 &1027753030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,7 +3667,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
-  repairAmount: 2
+  repairAmount: 5
   maxToolDurability: 65
   toolNumber: 1
   sliderOfDurability: {fileID: 20143360}
@@ -3803,7 +4012,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
-  repairAmount: 4
+  repairAmount: 10
   maxToolDurability: 35
   toolNumber: 2
   sliderOfDurability: {fileID: 1046459642}
@@ -3869,7 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 0
+  myCost: 15
   myDurabilityNow: 65
   toolsInUse:
   - {fileID: 1996469188}
@@ -3898,10 +4107,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4023,11 +4232,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4035,7 +4244,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Power Drill - 500
+  m_Text: Upgrade Power Drill - 500$
 --- !u!222 &1314148750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4074,7 +4283,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82375932}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4259,26 +4468,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75d0e6dedb6b9498fffc77ee1b0553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerAnimationChange: 1
   previousItemIndex: -1
   itemToFix: {fileID: 1322046903}
   itemToFixAudioSource: {fileID: 1322046907}
+  itemToFixGameObject: {fileID: 1322046901}
   itemIndex: 0
   itemSpriteArrayNotFixed:
   - {fileID: 21300000, guid: 9ab70d56da861a74b9f9d3a41253a623, type: 3}
   - {fileID: 21300000, guid: 550cb004ba24f7844941c2eabfb51d67, type: 3}
   - {fileID: 21300000, guid: 6ad3ac690941e8e40956067a1378831f, type: 3}
+  - {fileID: 21300000, guid: da68a918ba819e141acfc5c32c3dea55, type: 3}
+  - {fileID: 21300000, guid: e89a37ac83d99e7498235b68e6bf2721, type: 3}
+  - {fileID: 21300000, guid: 8f874e3bbcd3ccb45ba099d1b7e8ef90, type: 3}
+  - {fileID: 21300000, guid: 0d4b8e5e0796e8148a50b2f840ce0c93, type: 3}
   itemSpriteArrayFixed:
   - {fileID: 21300000, guid: c38cc144cc2673244aa8802c43f63def, type: 3}
   - {fileID: 21300000, guid: b8ae0246ebe019f4694c80bb9e739a63, type: 3}
   - {fileID: 21300000, guid: dfee5ea8b9e77e94fa134d69101485bb, type: 3}
+  - {fileID: 21300000, guid: b8beb22f0eca3c341bdb05ef432e89ea, type: 3}
+  - {fileID: 21300000, guid: 610ad24de339d154d9772889beb79a32, type: 3}
+  - {fileID: 21300000, guid: 08a52a146b4bcdc4284619f9cc7863aa, type: 3}
+  - {fileID: 21300000, guid: 6f82a18d72b6f7847a9cc2b37374d647, type: 3}
   currentSprite: {fileID: 0}
   currentRepairAmount: 0
+  incre: 0
   repairedAmmountSlider: {fileID: 1691270126}
   maxRepairLevel: 0
   currentRepairLevel: 0
-  maxDurabilityArray: 050000000a00000014000000
-  moneyItemValue: 02000000050000000c000000
+  maxDurabilityArray: 050000000a0000001400000014000000140000001400000014000000
+  moneyItemValue:
+  - 2
+  - 5
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
   moneyText: {fileID: 384754227}
   currentMoney: 0
   repairTools:
@@ -4292,12 +4517,21 @@ MonoBehaviour:
   - {fileID: 1046459642}
   - {fileID: 1675944732}
   currentToolDurability: 0
+  baseCostIncrement: 2
+  baseCostIncrementText: 'Improve -  '
+  baseCostDecrement: 2
+  baseCostDecrementText: 'Improve - '
   passiveIncomeTime: 0
   passiveIncomeAmount: 0
   incomeTimeButton: {fileID: 1750498870}
   tickTime: {fileID: 824213216}
   incomeAmountIncreaseButton: {fileID: 2017869884}
   incomePerTick: {fileID: 1779789450}
+  image: {fileID: 82860357}
+  hands:
+  - {fileID: 21300000, guid: c1d6420993954404b9478d98ce43aa35, type: 3}
+  - {fileID: 21300000, guid: 3d004d8250fcf574f835e5aa5b9d2992, type: 3}
+  - {fileID: 21300000, guid: cde948086e7402546a00fa920f10945d, type: 3}
 --- !u!82 &1322046907
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4496,6 +4730,7 @@ Transform:
   m_Children:
   - {fileID: 952093817}
   - {fileID: 860556704}
+  - {fileID: 591214230}
   m_Father: {fileID: 873852655}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4594,19 +4829,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 115
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Duct tape +Repair Power - 50Es
+  m_Text: Upgrade Duct tape - 50$
 --- !u!222 &1489286234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5091,7 +5326,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 6
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5125,6 +5360,7 @@ Transform:
   m_Children:
   - {fileID: 572240296}
   - {fileID: 1802192609}
+  - {fileID: 2052061654}
   m_Father: {fileID: 873852655}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5313,7 +5549,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
@@ -5325,7 +5561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Hammer - 150
+  m_Text: Upgrade Hammer - 150$
 --- !u!222 &1755193178
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5390,7 +5626,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -5536,7 +5772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f866c90037768a746895a54dba3678c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 0
+  myCost: 25
   myDurabilityNow: 35
   toolsInUse:
   - {fileID: 1996469188}
@@ -5565,10 +5801,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5781,7 +6017,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d595e168134b204dafb92ebd9bb4018, type: 3}
   - {fileID: 8300000, guid: 9bdef0edad1307a449ad2a2d6a94338c, type: 3}
   currentToolSound: {fileID: 0}
-  repairAmount: 8
+  repairAmount: 15
   maxToolDurability: 20
   toolNumber: 3
   sliderOfDurability: {fileID: 1675944732}
@@ -6255,10 +6491,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23529412}
-    m_PressedColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.5921569, g: 0.25490198, b: 0.08627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6345,6 +6581,95 @@ MonoBehaviour:
   - {fileID: 1834845126}
   toolnumber: 1
   mainButton: {fileID: 1322046903}
+  level: 1
+  textLv: {fileID: 712400933}
+  str: Hammer LV
+  me: {fileID: 2029196209}
+  defaultRepairAmount: 5
+  defaultCost: 150
+  defaultText: 'Upgrade Hammer - '
+  text: {fileID: 1755193177}
+  lv10: {fileID: 21300000, guid: def36ccb7483518459bde3ecff15a5ec, type: 3}
+  lv20: {fileID: 21300000, guid: 33a87b0eb152141439bd62dca6d43bf6, type: 3}
+--- !u!1 &2052061653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052061654}
+  - component: {fileID: 2052061656}
+  - component: {fileID: 2052061655}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2052061654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052061653}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.720703}
+  m_LocalScale: {x: 0.017692313, y: 0.02339067, z: 0.022221137}
+  m_Children: []
+  m_Father: {fileID: 1713973288}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.85, y: 0.37}
+  m_SizeDelta: {x: 158.59, y: 27.34}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2052061655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052061653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Wrench LV 1
+
+'
+--- !u!222 &2052061656
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052061653}
+  m_CullTransparentMesh: 0
 --- !u!1 &2075779773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,7 +6762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8b565f38eaad0341b553974d1d95899, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -6449,7 +6774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Repair Wrench - 25
+  m_Text: Repair Wrench - 25$
 --- !u!222 &2079280233
 CanvasRenderer:
   m_ObjectHideFlags: 0
