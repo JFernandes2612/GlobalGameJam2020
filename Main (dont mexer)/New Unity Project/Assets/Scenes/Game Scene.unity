@@ -3340,7 +3340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1b93c7cbacf3c4ca95569d6c51b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCost: 50
+  myCost: 0
   myRepairAmountIncrement: 1
   toolsInUse:
   - {fileID: 1996469188}
