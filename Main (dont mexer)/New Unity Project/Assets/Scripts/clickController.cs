@@ -66,7 +66,6 @@ public class clickController : MonoBehaviour
     {
         Debug.Log(1);
         image.GetComponent<Animator>().SetTrigger("Trigeer");
-        image.GetComponent<Animator>().Play("ArmAnimation");
         yield return new WaitForSeconds(1.2f);
         itemToFixGameObject.transform.localScale = new Vector2(0f, 0f);
     }
@@ -74,7 +73,6 @@ public class clickController : MonoBehaviour
     {
         Debug.Log(2);
         image.GetComponent<Animator>().SetTrigger("Trigeer");
-        image.GetComponent<Animator>().Play("ArmAnimation");
         yield return new WaitForSeconds(1f);
         itemToFixGameObject.transform.localScale = new Vector2(0.0495f, 0.0495f);
     }
