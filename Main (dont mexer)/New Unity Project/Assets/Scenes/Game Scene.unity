@@ -685,7 +685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d004d8250fcf574f835e5aa5b9d2992, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d0e084415b5ccc4baee602f6478a11c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4869,7 +4869,7 @@ MonoBehaviour:
   incomePerTick: {fileID: 1779789450}
   image: {fileID: 82860357}
   hands:
-  - {fileID: 21300000, guid: c1d6420993954404b9478d98ce43aa35, type: 3}
+  - {fileID: 21300000, guid: 4d0e084415b5ccc4baee602f6478a11c, type: 3}
   - {fileID: 21300000, guid: 3d004d8250fcf574f835e5aa5b9d2992, type: 3}
   - {fileID: 21300000, guid: cde948086e7402546a00fa920f10945d, type: 3}
 --- !u!82 &1322046907
