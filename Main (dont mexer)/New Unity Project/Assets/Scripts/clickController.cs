@@ -106,7 +106,7 @@ public class clickController : MonoBehaviour
         if (passiveIncomeTime <= 0.5f)              // is maxed out
         {
             incomeTimeButton.interactable = false;
-            incomeTimeButton.GetComponentInChildren<Text>().text = "Max LVL";
+            incomeTimeButton.GetComponentInChildren<Text>().text = "Max LV";
         }
 
         tickTime.text = "Tick Time: " + passiveIncomeTime + " s";                //atualiza o texto do tempo de income
@@ -133,7 +133,7 @@ public class clickController : MonoBehaviour
         if (passiveIncomeAmount >= 1024)              // is maxed out
         {
             incomeAmountIncreaseButton.interactable = false;
-            incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = "Max LVL";
+            incomeAmountIncreaseButton.GetComponentInChildren<Text>().text = "Max LV";
         }
 
         incomePerTick.text = "Income: " + passiveIncomeAmount + "$/" + passiveIncomeTime + " s";                //atualiza o texto do income per tick

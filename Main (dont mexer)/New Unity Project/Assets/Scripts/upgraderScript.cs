@@ -31,6 +31,7 @@ public class upgraderScript : MonoBehaviour
         {
             toolsInUse[toolnumber].image.sprite = lv20;
             me.interactable = false;
+            text.text = "Max LV";
         }
         if (level >= 10 && level < 20)
         {
