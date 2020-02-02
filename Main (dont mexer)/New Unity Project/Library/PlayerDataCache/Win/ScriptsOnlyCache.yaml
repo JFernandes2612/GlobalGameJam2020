@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - SceneChanger
     - clickController
     - musicController
+    - priceTags
     - repairTool
     - toolButton
     - upgraderScript
@@ -67,7 +68,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -134,9 +135,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 12704}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 13086}
+    - Class: 114
+      Script: {instanceID: 13118}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -191,7 +194,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,7 +243,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -289,7 +292,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -338,7 +341,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -387,7 +390,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -749,6 +752,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 522a20af04f983289070b9bb3712d530
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: priceTags
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -870,4 +879,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tutorial 3.unity
   - Assets/Scenes/Tutorial 4.unity
   - Assets/Scenes/Game Scene.unity
-  playerPath: C:/Users/Retchut/Desktop/test build/New Unity Project.exe
+  playerPath: C:/Users/jelao/OneDrive/Desktop/GlobalGameJam2020/Main (dont mexer)/Tap(e)
+    It.exe
