@@ -37,6 +37,11 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Tutorial 3");
     }
 
+    public void Tutorial4()
+    {
+        SceneManager.LoadScene("Tutorial 4");
+    }
+
     public void GoToGameScene()
     {
         SceneManager.LoadScene("Game Scene");

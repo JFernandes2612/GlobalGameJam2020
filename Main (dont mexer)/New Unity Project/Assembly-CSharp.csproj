@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\clickController.cs" />
+    <Compile Include="Assets\Scripts\musicController.cs" />
     <Compile Include="Assets\Scripts\repairTool.cs" />
     <Compile Include="Assets\Scripts\toolButton.cs" />
     <Compile Include="Assets\Scripts\upgraderScript.cs" />
