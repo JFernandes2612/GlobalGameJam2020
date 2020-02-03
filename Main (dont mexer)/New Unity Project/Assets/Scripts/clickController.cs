@@ -62,18 +62,26 @@ public class clickController : MonoBehaviour
     public Sprite[] hands;
 
     //end deste snippet
-    IEnumerator Timing1()               
+    
+    IEnumerator WaitForNewItemSelection()
     {
-        Debug.Log(1);
-        image.GetComponent<Animator>().SetTrigger("Trigeer");
-        yield return new WaitForSeconds(1.2f);
-        itemToFixGameObject.transform.localScale = new Vector2(0f, 0f);
-    }
-    IEnumerator Timing2()               
-    {
-        Debug.Log(2);
-        //image.GetComponent<Animator>().SetTrigger("Trigeer");
         yield return new WaitForSeconds(1.5f);
+        image.GetComponent<Animator>().SetTrigger("Trigeer");
+        SelectNewItem();
+    }
+    
+    IEnumerator TimingAgarrar()                       //mudar para imagem reparada, e esperar pela mão    
+    {
+        image.GetComponent<Animator>().SetTrigger("Trigeer");
+        yield return new WaitForSeconds(1.0f);
+        itemToFixGameObject.transform.localScale = new Vector2(0f, 0f);
+        yield return new WaitForSeconds(0.75f);
+    }
+    IEnumerator TimingLargar()               //working
+    {
+        image.sprite = hands[Random.Range(0, hands.Length)]; ;
+        //image.GetComponent<Animator>().SetTrigger("Trigeer");
+        yield return new WaitForSeconds(1.0f);
         itemToFixGameObject.transform.localScale = new Vector2(0.0495f, 0.0495f);
     }
     IEnumerator PassiveIncomeTimer()
@@ -144,7 +152,7 @@ public class clickController : MonoBehaviour
 
         itemToFix.interactable = false;
         yield return new WaitForSeconds(timer);
-        SelectNewItem();
+        StartCoroutine(WaitForNewItemSelection());
     }
 
     //quando o jogo começa
@@ -198,8 +206,7 @@ public class clickController : MonoBehaviour
 
         //variavel usada na verificação se o anterio é igual ao atual
         previousItemIndex = itemIndex;
-        StartCoroutine(Timing2());
-        image.sprite = hands[Random.Range(0, hands.Length)];
+        StartCoroutine(TimingLargar());
     }
 
 
@@ -238,8 +245,8 @@ public class clickController : MonoBehaviour
             currentMoney = Mathf.Round(currentMoney + (moneyItemValue[itemIndex] + incre * 0.02f * moneyItemValue[itemIndex]));
             moneyText.text = "Money : " + currentMoney;
             itemToFix.image.sprite = itemSpriteArrayFixed[itemIndex];
-            StartCoroutine(Timing1());
-            StartCoroutine(WaitTime(1.2f));
+            StartCoroutine(TimingAgarrar());
+            StartCoroutine(WaitTime(1.5f));
         }
 
     }
